@@ -1,15 +1,19 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import Cursor from './components/Cursor/Cursor';
+// import NavBar from './components/NavBar';
+// import Cursor from './components/Cursor';
+// import Header from './components/Header';
+
+import Lightbulb from './components/Lightbulb';
 
 function App() {
   return (
-    <div>
-      <a>This is a link</a>
-      <NavBar />
-      <Cursor />
-    </div>
+    <>
+      {/* <Header /> */}
+      {/* <NavBar />
+      <Cursor /> */}
+      <Lightbulb />
+    </>
 
   );
 }

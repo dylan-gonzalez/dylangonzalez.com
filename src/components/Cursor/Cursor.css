@@ -28,7 +28,7 @@
 
   .cursor--link-hovered {
       transform: translate(-50%, -50%) scale(1.25);
-      background-color: #fefefe;
+      background-color: #fafaf9;
   }
 
   .cursor--hidden {
