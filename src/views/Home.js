@@ -52,7 +52,6 @@ const Home = (props) => {
 
     return (
         <div className = {classes.container}>
-            {console.log(theme)}
             {/* <Navbar theme = {theme}/> */}
             
             {/* <Welcome theme ={theme} on = {props.dark} toggle = {props.toggleDarkMode} /> */}

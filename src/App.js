@@ -9,7 +9,7 @@ import {Resources} from './views/Resources';
 
 import Cursor from './components/elements/Cursor';
 import ThemeToggle from './utils/themeToggle.js';
-import ThemeContext, { DARK_THEME, LIGHT_THEME, ThemeMode } from './utils/theme';
+import ThemeContext, { THEMES, ThemeMode } from './utils/theme';
 import React, { useState } from 'react';
 import { useCallback } from 'react';
 import Navbar from './components/elements/Navbar';
@@ -29,16 +29,21 @@ const useStyles = makeStyles({
 
 function App() {
   const [ dark, setDark ] = useState(ThemeMode.getSetting);
-  const theme = dark ? DARK_THEME : LIGHT_THEME;
+  console.log(dark)
+  const theme = THEMES[dark];
+  console.log("Theme: ", theme)
   const classes = useStyles(theme);
 
   const toggleDarkMode = useCallback(function () {
     setDark(prevState => {
-      const newState = !prevState;
-      ThemeMode.updateSetting(newState);
-      return newState;
+      const newState = prevState + 1;
+      console.log(newState)
+      ThemeMode.updateSetting(THEMES[newState]);
+      return THEMES[newState];
     });
   }, []);
+
+  console.log(dark)
   
   return (
   <React.Fragment>

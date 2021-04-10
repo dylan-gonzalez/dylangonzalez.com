@@ -1,10 +1,9 @@
 import { Button } from '@material-ui/core'
 import React, { Component } from 'react'
-import {Sun, Moon} from 'react-feather';
+import {Sun, Moon, Circle} from 'react-feather';
 
 
 const ThemeToggle = ({on, toggle, theme}) => {
-    console.log("test")
     const props = {
         type: 'button',
         role: 'switch',
@@ -13,7 +12,8 @@ const ThemeToggle = ({on, toggle, theme}) => {
       };
 
     return (
-        <Button {...props}>{ on ? <Sun /> : <Moon/>}</Button>
+        // <Button {...props}>{ on ? <Sun /> : <Moon/>}</Button>
+        <Button {...props}>Change theme</Button>
     )
 }
 
